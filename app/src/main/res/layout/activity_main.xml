@@ -1,19 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/colorLight">
 
-    <TextView
+    <RelativeLayout
+        android:id="@+id/app_title"
+        android:layout_margin="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/app_title_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task"
+            android:textColor="@color/colorDarker"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:textSize="24dp"/>
+        <TextView
+            android:id="@+id/app_title_assassin"
+            android:layout_below="@+id/app_title_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Assassin"
+            android:layout_marginTop="-7dp"
+            android:textColor="@color/colorRed"
+            android:fontFamily="@font/roboto_condensed_bold"
+            android:textSize="24dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/square_cards"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/roboto_condensed_bold"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@id/app_title"
+        android:layout_centerInParent="true">
+        <RelativeLayout
+            android:id="@+id/todo_card"
+            android:layout_margin="10dp"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:background="@drawable/rounded_corners_bg"
+            android:elevation="3dp">
+            <ImageView
+                android:id="@+id/icon_todo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_todo"/>
+            <TextView
+                android:id="@+id/todo_card_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="To-Dos"
+                android:textColor="@color/colorBlue"
+                android:textSize="14dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/roboto_condensed_bold"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/focus_mode_card"
+            android:layout_toEndOf="@+id/todo_card"
+            android:layout_margin="10dp"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:background="@drawable/rounded_corners_bg"
+            android:elevation="3dp">
+            <ImageView
+                android:id="@+id/icon_focus_mode"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/icon_focus_mode"/>
+            <TextView
+                android:id="@+id/focus_mode_card_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="Focus Mode"
+                android:textColor="@color/colorGreen"
+                android:textSize="14dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/roboto_condensed_bold"/>
+        </RelativeLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
