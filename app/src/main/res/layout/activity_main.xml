@@ -41,11 +41,12 @@
         android:layout_centerInParent="true">
         <RelativeLayout
             android:id="@+id/todo_card"
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:background="@drawable/rounded_corners_bg"
-            android:elevation="3dp">
+            android:elevation="5dp"
+            android:translationZ="8dp">
             <ImageView
                 android:id="@+id/icon_todo"
                 android:layout_width="40dp"
@@ -57,7 +58,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:text="To-Dos"
+                android:text="To-Do"
                 android:textColor="@color/colorBlue"
                 android:textSize="14dp"
                 android:layout_marginLeft="17dp"
@@ -67,11 +68,14 @@
         <RelativeLayout
             android:id="@+id/focus_mode_card"
             android:layout_toEndOf="@+id/todo_card"
-            android:layout_margin="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="20dp"
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:background="@drawable/rounded_corners_bg"
-            android:elevation="3dp">
+            android:elevation="5dp"
+            android:translationZ="8dp">
             <ImageView
                 android:id="@+id/icon_focus_mode"
                 android:layout_width="40dp"
